@@ -81,7 +81,7 @@ describe('Function "howManyMovies"', () => {
       howManyMovies([
         {
           director: 'Steven Spielberg',
-          genre: ['Action', 'Drama', 'Thriller']
+          genre: ['Action', 'Drama', 'Thriller',"asdas"]
         },
         {
           director: 'Steven Spielberg',
