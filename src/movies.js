@@ -95,13 +95,12 @@ function bestYearAvg(movies) {
   listOfYears.forEach(year => {
     let moviesByYear = movies.filter(mv=>mv.year === year)
     let scoreAvg = scoresAverage(moviesByYear)
-    //if ( year === 1955 ) console.log("1955",scoreAvg,maxAverage)
-    //if ( year === 1977 ) console.log("1977",scoreAvg,maxAverage)
-
     if ( scoreAvg > maxAverage ) {
       maxAverage = scoreAvg; 
       maxYear = year;
-      console.log(scoreAvg,maxAverage)
+    }
+    if ( scoreAvg === maxAverage ){
+      maxYear = maxYear < year ? maxYear : year
     }
   });
   return `The best year was ${maxYear} with an average score of ${maxAverage}`
